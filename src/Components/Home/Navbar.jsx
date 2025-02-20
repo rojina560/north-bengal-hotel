@@ -21,14 +21,14 @@ const Navbar = () => {
         const navlinks = <>
         
             <Link>Rooms</Link>
-            <Link>page</Link>
+            <Link>bookings page</Link>
             <Link>about us</Link>
             <Link>contact us</Link>
         
         </>
     
     return (
-      <div className="navbar bg-pink-400 h-24 text-gray-600">
+      <div className="navbar bg-pink-400 h-20 text-gray-600">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,9 +53,10 @@ const Navbar = () => {
           
           </ul>
         </div>
-        <img className='w-16 rounded-[50px]' src={hotelLogo} alt="" />
-        <a className="btn btn-ghost text-xl">North <span className='text-yellow-300'>Bengal</span>Hotel</a>
-      </div>
+       <img className=' w-10 md:w-16  rounded-[50px]' src={hotelLogo} alt="" />
+       <p>North <span className='text-yellow-300 text-2xl'>Bengal</span> Hotel</p>
+       </div>
+   
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <div className='flex gap-5'>
