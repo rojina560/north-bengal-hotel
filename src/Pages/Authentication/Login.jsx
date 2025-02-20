@@ -1,0 +1,67 @@
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import AuthContext from '../../AuthProvider/Context';
+import toast from 'react-hot-toast';
+
+
+const Login = () => {
+  const {login , googleLogin} = useContext(AuthContext)
+  const handleLogin = async e =>{
+    e.preventDefault()
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email,password);
+    // Google Signin
+ 
+
+   login(email,password)
+   .then(result=>{
+   console.log('sign in' , result.user)
+   })
+   .catch(err =>{
+    console.log(err);
+   })
+   }
+
+  
+  const handleGoogleSignIn = async () => {
+    try {
+      await googleLogin()
+      toast.success('Signin Successful')
+    } catch (err) {
+      console.log(err)
+      toast.error(err?.message)
+    }
+  }
+    return (
+    <div className='my-8'>
+          <div className="card bg-pink-400 w-full max-w-sm mx-auto shrink-0 shadow-2xl">
+      <form onSubmit={handleLogin} className="card-body">
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Email</span>
+          </label>
+          <input name='email' type="email" placeholder="email" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Password</span>
+          </label>
+          <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+          
+        </div>
+        <div className="form-control mt-6">
+          <button className="btn btn-primary">Login</button>
+        </div>
+        Or <button onClick={handleGoogleSignIn}>
+          google
+        </button>
+      </form>
+      <p className='text-center pb-6'>Don't have An Account <Link className='text-yellow-400' to={'/register'}>Registration</Link></p>
+    </div>
+    </div>
+    );
+};
+
+export default Login;

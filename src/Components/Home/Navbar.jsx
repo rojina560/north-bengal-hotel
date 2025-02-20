@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import hotelLogo from '../../assets/logo/hotel.logo.png'
+import AuthContext from '../../AuthProvider/Context';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
+  const {user,logout} = useContext(AuthContext)
+  const handleLogout = ()=>{
+    logout()
+    .then(()=>{
+      toast('signout successfully')
+    }).catch((error)=>{
+      console.log(error);
+    })
+    
+
+    
+  }
     
         const navlinks = <>
         
@@ -33,14 +47,14 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm -m-[10px] dropdown-content  bg-pink-100  mt-6 w-52 p-2 shadow text-[20px]">
+            className="menu menu-sm -m-[10px] dropdown-content  text-pink-400  mt-6 w-52 p-2 shadow text-[20px]">
            
            {navlinks}
           
           </ul>
         </div>
         <img className='w-16 rounded-[50px]' src={hotelLogo} alt="" />
-        <a className="btn btn-ghost text-xl">North <span>Bengal</span>Hotel</a>
+        <a className="btn btn-ghost text-xl">North <span className='text-yellow-300'>Bengal</span>Hotel</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -49,9 +63,14 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className='navbar-end mr-6'>
+      {
+        user ? <button className='btn' onClick={handleLogout}>logout</button>:
+        <Link to={'/login'}><button className='btn'>Login</button></Link> 
+      }
+      
       </div>
+      
     </div>
     );
 };
