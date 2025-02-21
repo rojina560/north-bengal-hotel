@@ -20,7 +20,7 @@ const Navbar = () => {
     
         const navlinks = <>
         
-            <Link>Rooms</Link>
+            <Link to={'/rooms'}>Rooms</Link>
             <Link>bookings page</Link>
             <Link>about us</Link>
             <Link>contact us</Link>

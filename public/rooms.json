@@ -1,0 +1,73 @@
+[
+    {
+      "image": "https://i.postimg.cc/d1LH038C/room1.jpg",
+      "room_description": "Cozy single room with city view, free Wi-Fi, and air conditioning.",
+      "room_price": 80,
+      "room_size": "20 sqm",
+      "booking_date": "2025-03-10"
+    },
+    {
+      "image": "https://i.postimg.cc/Bnv4Ccsf/room2.webp",
+      "room_description": "Spacious double room with king-size bed and private balcony.",
+      "room_price": 120,
+      "room_size": "30 sqm",
+      "booking_date": "2025-03-12"
+    },
+    {
+      "image": "https://i.postimg.cc/ZqNNTyR2/room3.webp",
+      "room_description": "Luxury suite with ocean view, mini bar, and jacuzzi.",
+      "room_price": 250,
+      "room_size": "50 sqm",
+      "booking_date": "2025-04-01"
+    },
+    {
+      "image": "https://i.postimg.cc/vBQZp16W/room4.webp",
+      "room_description": "Family room with two queen beds and a spacious living area.",
+      "room_price": 180,
+      "room_size": "40 sqm",
+      "booking_date": "2025-03-20"
+    },
+    {
+      "image": "https://i.postimg.cc/Z5Hb6bQn/room5.webp",
+      "room_description": "Deluxe room with garden view and complimentary breakfast.",
+      "room_price": 150,
+      "room_size": "35 sqm",
+      "booking_date": "2025-02-28"
+    },
+    {
+      "image": "https://i.postimg.cc/2SKtsgbT/room7.webp",
+      "room_description": "Executive suite with a workspace, high-speed internet, and lounge access.",
+      "room_price": 300,
+      "room_size": "55 sqm",
+      "booking_date": "2025-03-05"
+    },
+    {
+      "image": "https://i.postimg.cc/bJz13wy5/room8.webp",
+      "room_description": "Standard twin room with modern decor and LED TV.",
+      "room_price": 100,
+      "room_size": "25 sqm",
+      "booking_date": "2025-03-15"
+    },
+    {
+      "image": "https://i.postimg.cc/g2FXg24K/room9.webp",
+      "room_description": "Penthouse suite with private rooftop pool and panoramic city view.",
+      "room_price": 500,
+      "room_size": "80 sqm",
+      "booking_date": "2025-04-10"
+    },
+    {
+      "image": "https://i.postimg.cc/y81JMb4J/room10.webp",
+      "room_description": "Business room with ergonomic desk, coffee machine, and soundproofing.",
+      "room_price": 200,
+      "room_size": "38 sqm",
+      "booking_date": "2025-03-18"
+    },
+    {
+      "image": "https://i.postimg.cc/bJz13wy5/room8.webp",
+      "room_description": "Cozy studio apartment with kitchenette and city skyline view.",
+      "room_price": 130,
+      "room_size": "28 sqm",
+      "booking_date": "2025-03-22"
+    }
+  ]
+  
