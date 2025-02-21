@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider/Context';
 import toast from 'react-hot-toast';
 
 
 const Login = () => {
-  const {login , googleLogin} = useContext(AuthContext)
+  const {login , googleLogin} = useContext(AuthContext);
+  const navigate = useNavigate()
+  const location = useLocation()
+  console.log(location);
+  const from = location.state || '/';
   const handleLogin = async e =>{
     e.preventDefault()
     const form = e.target;
@@ -18,6 +22,7 @@ const Login = () => {
    login(email,password)
    .then(result=>{
    console.log('sign in' , result.user)
+   navigate(from)
    })
    .catch(err =>{
     console.log(err);

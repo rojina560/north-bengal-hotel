@@ -4,8 +4,8 @@ import MainLayouts from "../Layout/MainLayouts";
 import Login from "../Pages/Authentication/Login";
 import Register from "../Pages/Authentication/Register";
 import Rooms from "../Pages/Rooms/Rooms";
-import RoomsCard from "../Pages/Rooms/RoomsCard";
 import RoomDetails from "../Pages/Rooms/RoomDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([{
     path: '/',
@@ -21,7 +21,7 @@ const router = createBrowserRouter([{
     },
     {
         path: '/rooms/:id',
-        element:<RoomDetails></RoomDetails>,
+        element:<PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5001/rooms/${params.id}`)
 
     },
