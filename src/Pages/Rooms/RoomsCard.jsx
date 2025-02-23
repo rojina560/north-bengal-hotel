@@ -1,5 +1,4 @@
 import React from 'react';
-import room1 from '../../assets/images/room1.jpg'
 import { Link } from 'react-router-dom';
 
 const RoomsCard = ({room}) => {
